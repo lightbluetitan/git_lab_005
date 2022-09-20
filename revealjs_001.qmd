@@ -1,0 +1,102 @@
+---
+title: Diagramas de Barras - R
+date: today
+description: Uso de los paquetes ggplot2 y lattice
+author: Renzo Cáceres Rossi
+format: 
+  revealjs: 
+    logo: logo_r.png
+    theme: simple
+    footer: "Sí lo puedes imaginar lo puedes programar"
+    chalkboard: true
+---
+
+```{r setup,include=FALSE}
+
+library(ggplot2)
+
+library(lattice)
+
+```
+
+
+## Diagrama de Barras
+
+Es un gráfico estadístico que nos permite representar la distribución de frecuencias de variables cualitativas y cuantitativas discretas.
+
+<center>
+
+
+![](diagrama_barras_amano.jpg){width=500}
+
+</center>
+
+
+## Bar Chart - barplot()
+
+La función  `barplot()` nos permite crear diagramas de barras (**Bar Charts**) en el lenguaje de programación R.
+
+```{r,fig.align='center'}
+x <- table(mtcars$cyl)
+
+colores <- c("orange","blue","purple")
+
+barplot(x,xlab="Cilindros",ylab="Frecuencias",main="Número de Cilindros",col=colores)
+
+
+```
+
+
+## Bar Chart - ggplot2
+
+```{r,echo=TRUE,fig.align='center',`code-line-numbers`='1'}
+
+
+
+ggplot(mtcars,aes(cyl)) + geom_bar(fill=colores) + 
+  labs(x="Cillindros",y="Frecuencias",title="Num. Cilindros") + theme_dark()
+
+
+```
+
+
+## Bar Chart - Lattice
+
+**Lattice** es un paquete del lenguaje de programación R, que nos permite crear gráficos estadísticos de muy buena calidad.
+
+
+```{r,out.width="70%",fig.align='center'}
+barchart(x,xlab="Cilindros",ylab="Frecuencias",main="Número de Cilindros",col=colores,horizontal=FALSE)
+
+```
+
+
+## mtcars - cyl & gear
+
+```{r,echo=TRUE}
+
+
+#| echo: true
+#| fig-align: center
+#| code-line-numbers: "3"
+
+
+y <- table(mtcars$gear)
+
+par(mfrow=c(1,2))
+
+barplot(x,xlab="Cilindros",ylab="Frecuencias",
+        main="Número de Cilindros",col=colores)
+
+barplot(y,xlab="Engranajes",ylab="Frecuencias",
+        main="Número de Engranajes",col=rainbow(3))
+
+
+
+```
+
+
+
+# Fin de la presentación
+
+

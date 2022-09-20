@@ -1,0 +1,500 @@
+    3  ls
+    4  cp matrix_2021.txt dirct_002/
+    5  ls dirct_002
+    6  cd ..
+    7  ls prueba_001
+    8  cd prueba_003
+    9  ls -d */
+   10  ls -d */
+   11  ls prueba_004
+   12  cp prueba_004/testeo_003.txt prueba_005
+   13  ls prueba_005
+   14  cd prueba_005
+   15  ls
+   16  mv testeo_003.txt tutorial_003.txt
+   17  ls
+   18  cd ..
+   19  clear;ls prueba_004
+   20  clear;ls prueba_004;cd prueba_004
+   21  mv testeo_001.txt ~/Documents/prueba_005
+   22  ls ~/Documents/prueba_005
+   23  cd ..
+   24  clear;ls -d */
+   25  ls prueba_009
+   26  rmdir prueba_009
+   27  clear;ls -d */
+   28  rm - r prueba_004
+   29  rm -r prueba_004
+   30  clear;ls -d */
+   31  clear;date;ls -d */
+   32  clear;date;ls -d */
+   33  cd /
+   34  cd ~
+   35  cd /;clear;date;ls
+   36  cat LICENSE.txt 
+   37  ls -d */
+   38  clear;date;ls -d */
+   39  man git
+   40  hostname
+   41  git init
+   42  git status
+   43  git add .
+   44  git status
+   45  git remote add quarto https://github.com/lightbluetitan/taller_quarto.git
+   46  git push quarto main
+   47  git push -f quarto main
+   48  git remote add quarto https://github.com/lightbluetitan/taller_quarto.git
+   49  git push -f quarto main
+   50  git push -f quarto main
+   51  git pull main
+   52  git pull quarto
+   53  git push`-f quarto main
+   54  git status
+   55  git add .
+   56  git commit -m "2nd commit quarto"
+   57  git status
+   58  git log
+   59  git -u push https://github.com/lightbluetitan/quarto_presentacion
+   60  git remote
+   61  git push -u quarto main
+   62  git remote add workshop_quarto https://github.com/lightbluetitan/quarto_presentacion
+   63  git push -u workshop_quarto main
+   64  git pull
+   65  git push -u workshop_quarto main
+   66  git pull
+   67  git push -u workshop_quarto main
+   68  git push --help
+   69  git pull --all
+   70  git push -u workshop_quarto main
+   71  exit
+   72  git --version
+   73  git init
+   74  git status
+   75  git config advice.userCoreFSMonitorConfig false
+   76  clear
+   77  git status
+   78  git config --global core.fsmonitor true
+   79  clear;git status
+   80  git add .
+   81  git status
+   82  git commit
+   83  git log
+   84  git status
+   85  git remote add origin https://github.com/lightbluetitan/lab_-001.git
+   86  git push -u origin main
+   87  git push -u origin main
+   88  Limitless1978rcr
+   89  git push origin main
+   90  git push origin main
+   91  git config credential.helper store
+   92  git push https://github.com/owner/repo.git
+   93  Limitless1978rcr
+   94  git push -u origin main
+   95  git remote -v
+   96  git push -u origin main
+   97  git status
+   98  git add .
+   99  git commit -m "2nd commit"
+  100  git push -u origin main
+  101  clear;git log
+  102  git remote -v
+  103  clear
+  104  dir
+  105  ls
+  106  ls -l
+  107  ls -a
+  108  uname
+  109  history
+  110  history > histo_log.txt
+  111  cat histo_log.txt
+  112  cat > prueba_001.txt
+  113  cat prueba_001.txt
+  114  clear
+  115  ls
+  116  mkdir lab_001 lab_002 lab_003
+  117  ls
+  118  cd lab_001
+  119  cd ..
+  120  rm lab_001
+  121  rmdir lab_001
+  122  clear;ls
+  123  rm prueba_001.txt
+  124  ls
+  125  cp histo_log.txt lab_002/
+  126  tree lab_002
+  127  dir lab_002
+  128  rm lab_002
+  129  rmdir lab_002
+  130  rmdir -r lab_002
+  131  rmdir --help
+  132  clear
+  133  ls
+  134  rm -r lab_002
+  135  ls
+  136  mv histo_log.txt history_log.txt
+  137  ls
+  138  mv history_log.txt lab_003/
+  139  dir lab_003
+  140  clear;ls
+  141  date
+  142  ls -a
+  143  histor
+  144  exit
+  145  pwd
+  146  hostname
+  147  clear;ls
+  148  head ioslides_001.Rmd 
+  149  tail ioslides_001.Rmd 
+  150  head -n 5 ioslides_001.Rmd 
+  151  tail -n 5 folium_map_rmarkdown.Rmd
+  152  diff folium_map_rmarkdown.Rmd folium_map_ramrkdown_001.Rmd
+  153  diff folium_map_rmarkdown.Rmd folium_map_rmarkdown_001.Rmd
+  154  quit
+  155  exit
+  156  date
+  157  uname
+  158  clar
+  159  clear
+  160  history
+  161  exit
+  162  pwd
+  163  hostname
+  164  clear;date;pwd
+  165  dir
+  166  ls
+  167  ls -l
+  168  ls -a
+  169  cat > prueba_texto.txt
+  170  cat prueba_texto.txt 
+  171  touch empty_file.txt
+  172  clear;ls
+  173  ls empty_file.txt 
+  174  ls -l empty_file.txt 
+  175  ls -l prueba_exto.txt
+  176  ls -l prueba_texto.txt
+  177  mkdir lab_001
+  178  ls -d */
+  179  clear;ls
+  180  mkdir lab_002 lab_003
+  181  ls
+  182  ls -d */
+  183  head prueba_texto.txt
+  184  history > history_log.txt
+  185  cat history_log.txt 
+  186  clear;head -n5 history_log.txt 
+  187  tail -n 6 history_log.txt 
+  188  ls
+  189  cd lab_001
+  190  cd ..
+  191  rmdir lab_002
+  192  ls -d */
+  193  cp prueba_texto.txt lab_001/
+  194  cd lab_001
+  195  cd ..
+  196  rmdir lab_001
+  197  rm -r lab_001
+  198  clear;ls
+  199  ls lab_003
+  200  cp prueba_texto.txt lab_003/
+  201  ls lab_003
+  202  cp ioslides_001.Rmd lab_003/
+  203  ls lab_003/
+  204  mv prueba_texto.txt test_lab.txt
+  205  diff folium_map_rmarkdown.Rmd folium_map_rmarkdown_001.Rmd
+  206  clear;ls -a
+  207  exit
+  208  git --version
+  209  git init
+  210  ls -a
+  211  git status
+  212  cat > .gitignore
+  213  git status
+  214  cat > readme.md
+  215  clear;git status
+  216  git add .gitignore 
+  217  git add readme.md
+  218  git add *.Rmd
+  219  git status
+  220  git rm --cached readme.md
+  221  git status
+  222  git rm --cached ioslides_001.Rmd 
+  223  git status
+  224  git rm --cached *.Rmd
+  225  git rm -r --cached *.Rmd
+  226  clear;git status
+  227  git rm -r --cached .
+  228  git status
+  229  git add .
+  230  clear;git status
+  231  git commit 
+  232  git log
+  233  git status
+  234  git remote -v
+  235  git remote add origin https://github.com/lightbluetitan/lab_git_002.git
+  236  git push -u origin main
+  237  git pull
+  238  git push -u origin main
+  239  git pull origin main
+  240  git push -u origin main
+  241  git pull
+  242  git pull origin main
+  243  git pull origin master --allow-unrelated-histories
+  244  git pull origin main --allow-unrelated-histories
+  245  git push -u origin main
+  246  clear;git status
+  247  git add .
+  248  git status
+  249  git commit -m "2n commit"
+  250  git push -u origin main
+  251  git remote -v
+  252  git remote add bitbucket  https://renzocaceresrossi@bitbucket.org/renzocaceresrossi/git_lab_001.git
+  253  git remote -v
+  254  git push -u bitbucket main
+  255  git push -u bitbucket main
+  256  clear;git status
+  257  git add .
+  258  git status
+  259  git commit -m "3th commit"
+  260  git push -u bitbucket main
+  261  git remote -v
+  262  git clone https://renzocaceresrossi@bitbucket.org/renzocaceresrossi/git_lab_001.git
+  263  cd /h/lab_git_001
+  264  clear
+  265  git status
+  266  git remote add gitlab https://gitlab.com/m10720/git_labs_001.git
+  267  git remote -v
+  268  git push -u gitlab main
+  269  git --list
+  270  git --global -list
+  271  git config --list
+  272  git config user.name "renzo"
+  273  git config user.email "arenzocaceresrossi@gmail.com"
+  274  git config --list
+  275  clear;git branch
+  276  git branch lab_001
+  277  git branch
+  278  git checkout lab_001
+  279  git branch
+  280  git checkout main
+  281  git branch
+  282  exit
+  283  uname
+  284  pwd
+  285  hostname
+  286  date
+  287  history
+  288  clear
+  289  history > history_log.txt
+  290  cat history_log.txt
+  291  clear;date;pwd
+  292  dir
+  293  ls
+  294  ls -l
+  295  ls -a
+  296  mkdir lab_001
+  297  mkdir lab_002 lab_003 lab_003
+  298  mkdir lab_004
+  299  clear;dir
+  300  ls
+  301  rm rmarkdown_001.Rmd 
+  302  ls
+  303  rmdir lab_001
+  304  ls
+  305  cp history_log.txt lab_002/
+  306  ls lab_002
+  307  rmdir lab_002
+  308  rm -r lab_002
+  309  clear;ls
+  310  mv history_log.txt historia_log.txt
+  311  ls
+  312  mv historia_log.txt lab_004/
+  313  ls lab_004
+  314  clear;ls
+  315  cd lab_004
+  316  ls
+  317  cd ..
+  318  cat > prueba_texto.txt
+  319  cat prueba_texto.txt 
+  320  head prueba_texto.txt 
+  321  head -n 2 prueba_texto.txt 
+  322  tail -n 1 prueba_texto.txt 
+  323  touch empty_001.txt
+  324  ls empty_001.txt 
+  325  clear;ls
+  326  ls -l
+  327  ls -l empty_001.txt 
+  328  head prueba_texto.txt 
+  329  exit
+  330  exit
+  331  uname
+  332  date
+  333  pwd
+  334  hostname
+  335  who
+  336  whois
+  337  whoami
+  338  whoami
+  339  clear
+  340  uname
+  341  date
+  342  pwd
+  343  hostname
+  344  whoami
+  345  clear
+  346  clear;date;pwd
+  347  mkdir lab_005 lab_006 lab_006
+  348  ls
+  349  exit
+  350  uname
+  351  date
+  352  pwd
+  353  hostname
+  354  whoami
+  355  exit
+  356  clear
+  357  clear;date;pwd
+  358  mkdir lab_007 lab_008 lab_009
+  359  mkdir lab_010
+  360  dir
+  361  ls
+  362  ls -l
+  363  ls -a
+  364  clear;ls
+  365  rm quarto_200.qmd
+  366  ls
+  367  rmdir lab_003
+  368  ls
+  369  ls lab_004
+  370  rmdir lab_004
+  371  rm -r lab_004
+  372  ls
+  373  clear;history
+  374  clear;history > history_log.txt
+  375  ls
+  376  cat history_log.txt
+  377  clear
+  378  cat > historia_log.txt
+  379  head historia_log.txt 
+  380  head -n 1 historia_log.txt 
+  381  tail -n 1 historia_log.txt 
+  382  clear
+  383  ls
+  384  cp history_log.txt lab_005/
+  385  ls lab_005
+  386  ls -d */
+  387  clear
+  388  ls
+  389  dir revealjs_001.qmd revealjs_presentation_01.qmd 
+  390  diff revealjs_001.qmd revealjs_presentation_01.qmd 
+  391  clear
+  392  ls
+  393  cp revealjs_rmarkdown_001.Rmd lab_007/
+  394  mv empty_001.txt vacio_001.txt
+  395  mv vacio_001.txt lab_009/
+  396  ls lab_009
+  397  cd lab_009
+  398  ls
+  399  cd ..
+  400  rm -r lab_005 lab_007 lab_009
+  401  clear
+  402  ls
+  403  exit
+  404  git --version
+  405  git init
+  406  git status
+  407  git add historia_log.txt 
+  408  git status
+  409  git add *.txt
+  410  clear;git status
+  411  git add .
+  412  clear;git status
+  413  git rm --cached historia_log.txt
+  414  git rm --cached history_log.txt 
+  415  git status
+  416  git rm --cached *.qmd
+  417  clear;git status
+  418  git rm -r --cached .
+  419  clear;git status
+  420  git add .
+  421  clear;git status
+  422  git commit 
+  423  git log
+  424  git status
+  425  git add .
+  426  clear;git status
+  427  git commit -m "Second commit on modified Quarto files"
+  428  git log
+  429  cat > .gitignore
+  430  clear;git status
+  431  git add .
+  432  git status
+  433  git commit -m "Third commit on modified Quarto files"
+  434  cat > readme.md
+  435  git status
+  436  git status
+  437  git add .
+  438  clear
+  439  git commit -m "Fourth commit on modified Quarto files"
+  440  git status
+  441  ls -a
+  442  git remote add origin https://github.com/lightbluetitan/git_lab_001.git
+  443  git remote -v
+  444  git push -u origin main
+  445  git pull
+  446  git push -u origin main
+  447  git pull origin main
+  448  git pull origin main --allow-unrelated-histories
+  449  git push -u origin main
+  450  git remote add origin_01 https://github.com/lightbluetitan/git_lab_002.git
+  451  git branch --help
+  452  clear;git remote -v
+  453  git push -u origin_01 main
+  454  git clone https://github.com/lightbluetitan/git_lab_002.git
+  455  clear;git config --list
+  456  git config --global user.name "Renzo Cáceres Rossi"
+  457  git config --global user.email "arenzocaceresrossi@gmail.com"
+  458  git config --list
+  459  git config user.name "Renzo Rossi Velasquez"
+  460  git config user.email "arenzocaceresrossi@gmail.com"
+  461  clear;git config --list
+  462  clear;git branch
+  463  git branch
+  464  git branch lab_001
+  465  git branch
+  466  git checkout lab_001
+  467  git checkout main
+  468  git branch -d lab_001
+  469  clear;ls
+  470  git checkout -- revealjs_rmarkdown_001.Rmd
+  471  git status
+  472  git status
+  473  git checkout -- revealjs_rmarkdown_001.Rmd
+  474  git diff revealjs_rmarkdown_001.Rmd
+  475  clear
+  476  git remote add bitbucket https://renzocaceresrossi@bitbucket.org/renzocaceresrossi/git_lab_002.git
+  477  git push -u bitbucket main
+  478  git remote add gitlab https://gitlab.com/m10720/git_lab_002.git
+  479  git push -u gitlab main
+  480  git pull gitlab main --allow-unrelated-histories
+  481  git push -u gitlab main
+  482  git remote -v
+  483  git pull gitlab_001 main --allow-unrelated-histories
+  484  git remote -v
+  485  exit
+  486  uname
+  487  date
+  488  pwd
+  489  hostname
+  490  clear
+  491  whoami
+  492  history
+  493  clear
+  494  exit
+  495  uname
+  496  date
+  497  pwd
+  498  hostname
+  499  whoami
+  500  hitory
+  501  history
+  502  history > history_log.txt

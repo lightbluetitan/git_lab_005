@@ -1,0 +1,357 @@
+---
+title: Bar Charts - R
+subtitle: barplot() - ggplot2 - lattice
+description: Crear Bar Charts en el lenguaje de programación R, utilizando los paquetes ggplot2 y lattice.
+date: today #now #last-modified
+format: 
+   revealjs: 
+     theme: white
+     chalkboard: true
+     transition: slide
+     logo: logo_r.png
+lang: Es-es
+---
+
+```{r setup,include=FALSE}
+
+library(ggplot2)
+
+library(lattice)
+
+library(reticulate)
+
+library(sqldf)
+
+```
+
+```{python,include=FALSE}
+
+import matplotlib.pyplot as plt
+
+import numpy as np
+
+import seaborn as sns
+
+```
+
+
+## Herramientas
+
+
+:::{.incremental}
+
+- Lenguaje de Programación R 4.2x
+
+- Lenguaje de programación Pytghon 3.10x
+
+- Paquete: **ggplot2,lattice,reticulate,SQLDF**.
+
+- Librerías: **Matplotlib,Numpy,Seaborn**.
+
+
+:::
+
+
+:::{.callout-tip}
+## Consejo!!!
+Instala las últimas versiones de **R,RStudio,Python y Quarto**.
+
+:::
+
+
+## Markdown - RMarkdown - Quarto
+
+
+
+:::{layout-ncol=3}
+
+![Logo Markdown](markdown_logo_01.png){#fig-markdown}
+
+![Logo RMarkdown](rmarkdown_logo_01.png){#fig-rmarkdown}
+
+![Logo Quarto](quarto_logo_01.png){#fig-quarto}
+
+
+:::
+
+
+
+:::{.callout-note}
+**Quarto** permite ejecutar código de **R,Python,Julia y Observable JS**.
+
+:::
+
+
+
+
+
+## Diagramas de Barras 
+
+El diagrama de barras (**Bar Chart**) es un gráfico estadístico que nos permite representar la distribución de frecuencias de variables cualitativas y cuantitativas discretas, compartimos la siguiente imagen como referencia.
+
+<center>
+
+![Bar Chart creado por el autor.](diagrama_barras_amano.jpg){width=400}
+
+</center>
+
+
+## Data Set - mtcars
+
+:::{.panel-tabset}
+
+### mtcars
+
+```{r}
+summary(mtcars)
+
+```
+
+
+
+### var_cyl
+
+```{r var_cyl}
+
+summary(mtcars$cyl)
+
+cyl_table <- sqldf("select cyl,count(cyl) as cantidad from mtcars group by cyl")
+
+cyl_table
+
+```
+
+
+
+
+### var_gear
+
+```{r var_gear}
+
+summary(mtcars$gear)
+
+gear_table <- sqldf("select gear,count(gear) as cantidad from mtcars group by gear")
+
+gear_table
+
+```
+
+
+
+### var_carb
+
+```{r var_carb}
+
+summary(mtcars$carb)
+
+carb_table <- sqldf("select carb,count(carb) as cantidad from mtcars group by carb")
+
+carb_table
+
+```
+
+
+:::
+
+
+## Bar Chart - barplot()
+
+La función  `barplot()` nos permite crear diagramas de barras (**Bar Charts**) en el lenguaje de programación R.
+
+```{r barplot,fig.align='center',fig.cap="Bar Chart creado con la función barplot()"}
+
+x <- table(mtcars$cyl)
+
+colores <- c("orange","blue","purple")
+
+barplot(x,xlab="Cilindros",ylab="Frecuencias",main="Número de Cilindros",col=colores)
+
+
+```
+
+
+## Bar Chart - ggplot2
+
+**ggplot2** es un paquete del lenguaje de programación que nos permite crear gráficos estadísticos de gran calidad.
+
+```{r ggplot2,fig.align='center',out.width="80%",fig.cap="Bar Chart creado con ggplot2"}
+
+
+ggplot(mtcars,aes(cyl)) + geom_bar(fill=colores) + labs(x="Cillindros",y="Frecuencias",title="Número de Cilindros") + theme_dark()
+
+
+```
+
+## Bar Chart - Lattice
+
+**Lattice** es un paquete del lenguaje de programación R, que nos permite crear gráficos estadísticos de muy buena calidad.
+
+```{r lattice,fig.align='center',out.width="80%",fig.cap="Bar Chart creado con el paquete lattice"}
+
+barchart(x,xlab="Cilindros",ylab="Frecuencias",main="Número de Cilindros",col=colores,horizontal=FALSE)
+
+```
+
+
+## mtcars - cyl & gear
+
+A continuación, mostramos como unir dos diagramas de barras (**Bar Charts**) en un solo gráfico.
+
+```{r cyl_gear,fig.align='center',out.width="70%",fig.cap="Bar Charts creado con la función barplot()"}
+y <- table(mtcars$gear)
+
+par(mfrow=c(1,2))
+
+barplot(x,xlab="Cilindros",ylab="Frecuencias",main="Número de Cilindros",col=colores)
+
+barplot(y,xlab="Engranajes",ylab="Frecuencias",main="Número de Engranajes",col=rainbow(3))
+
+
+```
+
+
+## YouTube - Tutorial barplot - ggplot2
+
+
+<center>
+
+
+<iframe width="800" height="500" src="https://www.youtube.com/embed/EkxRj02iaLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-external01></iframe>
+
+</center>
+
+
+## Bar Charts - Matplotlib
+
+**Matplotlib** es una librería del lenguaje de programación Python, que nos permite crear gráficos estadísticos de gran calidad,compartimos la siguiente imagen.
+
+```{python,results='hide',collape=TRUE,out.width="70%",fig.align="center",fig.cap="Bar Chart creado con la librería Matplotlib"}
+
+eje_x = ['Python', 'R', 'Node.js', 'PHP']
+ 
+
+eje_y = [50,20,35,47]
+ 
+
+plt.bar(eje_x, eje_y)
+ 
+
+plt.ylabel('Cantidad de usuarios')
+ 
+
+plt.xlabel('Lenguajes de programación')
+ 
+
+plt.title('Usuarios de lenguajes de programación')
+ 
+
+plt.show()
+
+```
+
+
+## Diagrama Barras Horizontal
+
+A continuación, presentamos como crear un **diagrama de barras horizontal** en el lenguaje de programación Python, utilizando la librería Matplotlib. 
+
+```{python,results='hide',collapse=TRUE,fig.align="center",out.width="70%",fig.cap="Bar Charts creado con Matplotlib y Numpy"}
+
+eje_x = ['Prog.', 'Ciencia', 'Mat.', 'Ing.']
+ 
+
+eje_y = [76,31,45,57]
+
+colores =['#FF8C00','#9932CC','#8B0000','#8FBC8F']
+ 
+
+plt.barh(eje_x, eje_y, color=colores)
+plt.ylabel('Empleados')
+plt.xlabel('Habilidades')
+plt.title('Habilidades')
+plt.show()
+
+
+```
+
+
+## Diagrama Barras Apiladas
+
+```{.python code-line-numbers="1-2"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+serie_1 = [406, 387, 442, 457, 485]
+serie_2 = [421, 453, 435, 478, 512]
+ 
+ 
+numero_de_grupos = len(serie_1)
+indice_barras = np.arange(numero_de_grupos)
+ancho_barras =0.35
+ 
+plt.bar(indice_barras, serie_1, width=ancho_barras, label='Hombres')
+plt.bar(indice_barras + ancho_barras, serie_2, width=ancho_barras, label='Mujeres')
+plt.legend(loc='best')
+
+plt.xticks(indice_barras + ancho_barras, ('2017', '2018', '2019', '2020','2021'))
+ 
+plt.ylabel('Numero de habitantes')
+plt.xlabel('Año')
+plt.title('Numero de habitantes por genero')
+ 
+plt.show()
+
+
+```
+
+
+## Bar Charts - Seaborn
+
+**Seaborn** es una librería de Python que nos permite crear gráficos estadísticos de gran calidad, fue creada tomando como base **Matplotlib**.
+
+```{python,results='hide',collapse=TRUE,fig.align="center",out.width="70%",fig.cap="Bar Chart creado con Seaborn"}
+
+eje_x = [4,6,8]
+
+eje_y = [11,7,14]
+
+sns.barplot(x=eje_x,y=eje_y)
+
+plt.title("Número de cilindros")
+
+plt.xlabel("Cilindros")
+
+plt.ylabel("Frecuencias")
+
+plt.show()
+
+```
+
+
+## YouTube - Tutorial Matplotlib - Seaborn
+
+<center>
+
+
+<iframe width="800" height="400" src="https://www.youtube.com/embed/jPre6LVvr5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-external=1></iframe>
+
+
+</center>
+
+
+
+# Fin de la presentación
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
